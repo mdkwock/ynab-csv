@@ -4,6 +4,8 @@ numberfy = (val) ->
   if !val?
     val = ''  
   if isNaN(val)
+    # remove all commas
+    val.replace(",","")
     # check for negative signs or parenthases.
     is_negative = if (val.match("-") || val.match(/\(.*\)/)) then -1 else 1
     # return just the number and make it negative if needed.
