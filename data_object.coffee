@@ -60,5 +60,5 @@ class window.DataObject
       row_values = []
       ynab_cols.forEach (col) ->
         row_values.push row[col]
-      string += row_values.join(',') + "\n"
+      string += '"'+row_values.join('","') + '"\n'
     string
